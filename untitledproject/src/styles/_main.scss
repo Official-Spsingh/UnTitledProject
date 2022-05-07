@@ -1,0 +1,123 @@
+@import "./theme";
+.navbar {
+    box-sizing: border-box;
+    height: 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    width: 100%;
+    .header {
+        font-weight: 600;
+        flex: 1;
+    }
+    .navs {
+        flex: 5;
+        .nav-list {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            .nav-item {
+                list-style-type: none;
+                margin: 0 10px;
+                padding: 4px 10px;
+                cursor: pointer;
+                .switch {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+        }
+    }
+}
+.landing {
+    height: calc(100vh - 48px);
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+    .landing-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        .form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .nameInput {
+                height: 24px;
+                border: none;
+                outline: none;
+                position: relative;
+                z-index: 0;
+                border-radius: 10px;
+                margin: 0 6px;
+                padding: 4px;
+                width: 180px;
+            }
+            .enterBtn {
+                width: 80px;
+                height: 30px;
+                border: none;
+                outline: none;
+                cursor: pointer;
+                position: relative;
+                z-index: 0;
+                border-radius: 10px;
+                padding: 4px;
+            }
+
+            .enterBtn:before {
+                content: "";
+                position: absolute;
+                top: -2px;
+                left: -2px;
+                background-size: 400%;
+                z-index: -1;
+                filter: blur(5px);
+                width: calc(100% + 4px);
+                height: calc(100% + 4px);
+                animation: glowing 20s linear infinite;
+                opacity: 0;
+                transition: opacity 0.3s ease-in-out;
+                border-radius: 10px;
+            }
+            .enterBtn:hover:before {
+                opacity: 1;
+            }
+
+            .enterBtn:after {
+                z-index: -1;
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                left: 0;
+                top: 0;
+                border-radius: 10px;
+            }
+
+            @keyframes glowing {
+                0% {
+                    background-position: 0 0;
+                }
+                50% {
+                    background-position: 400% 0;
+                }
+                100% {
+                    background-position: 0 0;
+                }
+            }
+        }
+    }
+}
+a{
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}

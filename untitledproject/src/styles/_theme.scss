@@ -1,0 +1,69 @@
+@import "../styles/colors";
+
+.dark {
+    &.navbar {
+        background-color: $backgroundColorDarkVariant1;
+        color: $textColorLightVariant1;
+    }
+    &.landing {
+        background-color: $backgroundColorDarkVariant1;
+        color: $textColorLightVariant1;
+        .form {
+            .nameInput {
+                background-color: $backgroundColorDarkVariant2;
+                color: $textColorLightVariant2;
+            }
+            .enterBtn {
+                background-color: $backgroundColorDarkVariant2;
+                color: $textColorLightVariant2;
+            }
+            .enterBtn:before {
+                background: linear-gradient(
+                    45deg,
+                    $enterBtnType1Gradient1,
+                    $enterBtnType1Gradient2,
+                    $enterBtnType1Gradient3,
+                    $enterBtnType1Gradient4,
+                    $enterBtnType1Gradient5,
+                    $enterBtnType1Gradient6,
+                    $enterBtnType1Gradient7,
+                    $enterBtnType1Gradient8
+                );
+            }
+        }
+    }
+}
+
+.light {
+    &.navbar {
+        background-color: $backgroundColorLightVariant1;
+        color: $textColorDarkVariant1;
+    }
+    &.landing {
+        background-color: $backgroundColorLightVariant1;
+        color: $textColorDarkVariant1;
+        .form {
+            .nameInput {
+                background-color: $backgroundColorLightVariant2;
+                color: $textColorDarkVariant2;
+            }
+            .enterBtn {
+                background-color: $backgroundColorLightVariant2;
+                color: $textColorDarkVariant2;
+            }
+            .enterBtn:before {
+                background: linear-gradient(
+                    45deg,
+                    $enterBtnType1Gradient1,
+                    $enterBtnType1Gradient2,
+                    $enterBtnType1Gradient3,
+                    $enterBtnType1Gradient4,
+                    $enterBtnType1Gradient5,
+                    $enterBtnType1Gradient6,
+                    $enterBtnType1Gradient7,
+                    $enterBtnType1Gradient8
+                );
+            }
+        }
+    }
+}
